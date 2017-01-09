@@ -1,0 +1,53 @@
+#get-generation
+
+This module returns the generation of a person, given it's birth year
+
+For example, if a person was born in 2000, it would say that he/she is from the Generation Z
+
+## Installation
+
+``` npm i --save get-generation ```
+
+## Generations available
+* Traditionalist < 1946
+* Older Boomer < 1955
+* Younger Boomer < 1965
+* Generation X (older) < 1971
+* Generation X (younger) < 1981
+* Generation Y < 1996
+* Generation Z < 2011
+* Generation Alpha (now)
+
+
+## Usage
+
+### Javascript:
+
+``` js
+
+const getGeneration = require('get-generation').getGeneration;
+
+getGeneration(1954) // Older Boomer
+getGeneration(2011) // Generation Alpha
+
+```
+
+### Typescript
+```ts
+
+import {getGeneration} from 'get-generation';
+
+getGeneration(2003) // Generation Z
+
+```
+
+## Creator
+Juan Camilo Guarín Peñaranda
+Cali, Colombia
+
+## License
+MIT.
+
+## Bibliography
+* According to: [Boston College](http://www.bc.edu/content/dam/files/research_sites/agingandwork/pdf/publications/RH06_Age_Generations.pdf)
+* And: [Carreer planner] (https://www.careerplanner.com/Career-Articles/Generations.cfm)
