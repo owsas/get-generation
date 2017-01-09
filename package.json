@@ -1,6 +1,6 @@
 {
   "name": "get-generation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gets the generation of the population, given a birth year",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,10 @@
     "by",
     "year"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcguarinpenaranda/get-generation.git"
+  },
   "author": "Juan Camilo Guarin P",
   "license": "ISC"
 }
