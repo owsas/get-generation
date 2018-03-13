@@ -1,6 +1,6 @@
 {
   "name": "get-generation",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Gets the generation of the population, given a birth year",
   "main": "out/index.js",
   "types": "out/index.d.ts",
