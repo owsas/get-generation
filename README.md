@@ -16,29 +16,17 @@ For example, if a person was born in 2000, it would say that he/she is from the 
 * Generation X (younger) < 1981
 * Generation Y < 1996
 * Generation Z < 2011
-* Generation Alpha (now)
+* Generation Alpha (now) // 2018
 
 
 ## Usage
 
-### Javascript:
-
 ``` js
+import { getGenerationByAge, getGenerationByYear } from "get-generation";
 
-const getGeneration = require('get-generation').getGeneration;
-
-getGeneration(1954) // Older Boomer
-getGeneration(2011) // Generation Alpha
-
-```
-
-### Typescript
-```ts
-
-import {getGeneration} from 'get-generation';
-
-getGeneration(2003) // Generation Z
-
+getGenerationByYear(1954) // Older Boomer
+getGenerationByYear(2011) // Generation Alpha
+getGenerationByAge(20) // Generation Z (as of 2018)
 ```
 
 ## Creator
