@@ -2,8 +2,10 @@
   "name": "get-generation",
   "version": "1.0.2",
   "description": "Gets the generation of the population, given a birth year",
-  "main": "index.js",
+  "main": "out/index.js",
+  "types": "out/index.d.ts",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,5 +19,10 @@
     "url": "https://github.com/jcguarinpenaranda/get-generation.git"
   },
   "author": "Juan Camilo Guarin P",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^22.2.0",
+    "ts-jest": "^22.4.1",
+    "typescript": "^2.7.2"
+  }
 }
