@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest --maxWorkers=2 --no-coverage"
   },
   "keywords": [
     "get",
@@ -28,10 +28,15 @@
     "typescript": "^2.7.2"
   },
   "jest": {
+    "mapCoverage": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/*.ts"
+    ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testRegex": "\\.test\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
