@@ -1,4 +1,4 @@
-import { getGenerationByAge, getGenerationByYear } from "../src";
+import { getGenerationByAge, getGenerationByYear, getAllGenerationsInfo } from "../src";
 
 describe('#getGenerationByYear', () => {
   test('should get the Traditionalist type', () => {
@@ -45,5 +45,63 @@ describe('getGenerationByAge', () => {
 
   test('should get Generation Z for 20 years old people', () => {
     expect(getGenerationByAge(20)).toEqual('Generation Z');
+  });
+});
+
+describe('getAllGenerationsInfo', () => {
+  test('should get object array with all generations info', () => {
+    const thisYear: number = new Date().getFullYear();
+
+    const response = [{
+      name: 'Traditionalist',
+      range: {
+        min: 0,
+        max: 1954,
+      },
+    }, {
+      name: 'Older Boomer',
+      range: {
+        min: 1955,
+        max: 1964,
+      },
+    }, {
+      name: 'Younger Boomer',
+      range: {
+        min: 1965,
+        max: 1970,
+      },
+    }, {
+      name: 'Generation X (older)',
+      range: {
+        min: 1971,
+        max: 1980,
+      },
+    }, {
+      name: 'Generation X (younger)',
+      range: {
+        min: 1971,
+        max: 1980,
+      },
+    }, {
+      name: 'Generation Y',
+      range: {
+        min: 1981,
+        max: 1995,
+      },
+    }, {
+      name: 'Generation Z',
+      range: {
+        min: 1996,
+        max: 2010,
+      },
+    }, {
+      name: 'Generation Alpha',
+      range: {
+        min: 2011,
+        max: thisYear,
+      },
+    }];
+
+    expect(getAllGenerationsInfo()).toEqual(response);
   });
 });
