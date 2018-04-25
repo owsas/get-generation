@@ -23,3 +23,56 @@ export function getGenerationByAge(age: number): string {
   const oldYear = date.getFullYear() - age
   return getGenerationByYear(oldYear)
 }
+
+export function getAllGenerationsInfo(): object[] {
+  const thisYear: number = new Date().getFullYear();
+  return [{
+    name: 'Traditionalist',
+    range: {
+      min: 0,
+      max: 1954,
+    },
+  }, {
+    name: 'Older Boomer',
+    range: {
+      min: 1955,
+      max: 1964,
+    },
+  }, {
+    name: 'Younger Boomer',
+    range: {
+      min: 1965,
+      max: 1970,
+    },
+  }, {
+    name: 'Generation X (older)',
+    range: {
+      min: 1971,
+      max: 1980,
+    },
+  }, {
+    name: 'Generation X (younger)',
+    range: {
+      min: 1971,
+      max: 1980,
+    },
+  }, {
+    name: 'Generation Y',
+    range: {
+      min: 1981,
+      max: 1995,
+    },
+  }, {
+    name: 'Generation Z',
+    range: {
+      min: 1996,
+      max: 2010,
+    },
+  }, {
+    name: 'Generation Alpha',
+    range: {
+      min: 2011,
+      max: thisYear,
+    },
+  }]
+}
