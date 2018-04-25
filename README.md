@@ -22,11 +22,26 @@ For example, if a person was born in 2000, it would say that he/she is from the 
 ## Usage
 
 ``` js
-import { getGenerationByAge, getGenerationByYear } from "get-generation";
+import { getGenerationByAge, getGenerationByYear, getAllGenerationsInfo } from "get-generation";
 
 getGenerationByYear(1954) // Older Boomer
 getGenerationByYear(2011) // Generation Alpha
 getGenerationByAge(20) // Generation Z (as of 2018)
+
+getAllGenerationsInfo();
+/* returns
+[{
+    name: 'Traditionalist',
+    range: {
+      min: 0,
+      max: 1954,
+    },
+  }, {
+    name: 'Older Boomer',
+    ....
+  }
+]
+*/
 ```
 
 ## Creator
