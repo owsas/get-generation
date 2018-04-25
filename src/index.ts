@@ -1,3 +1,11 @@
+export interface IGenerationInfo {
+  name: string,
+  range: {
+    min: number,
+    max: number,
+  }
+}
+
 export function getGenerationByYear(birthYear: number): string {
   if (birthYear < 1946) {
     return "Traditionalist"
@@ -24,7 +32,7 @@ export function getGenerationByAge(age: number): string {
   return getGenerationByYear(oldYear)
 }
 
-export function getAllGenerationsInfo(): object[] {
+export function getAllGenerationsInfo(): IGenerationInfo[] {
   const thisYear: number = new Date().getFullYear();
   return [{
     name: 'Traditionalist',
