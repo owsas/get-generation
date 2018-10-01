@@ -1,4 +1,4 @@
-#get-generation
+# get-generation
 
 This module returns the generation of a person, given it's birth year
 
