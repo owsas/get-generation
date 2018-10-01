@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepare": "npm run build",
-    "test": "npx jest --maxWorkers=2 --no-coverage"
+    "test": "npx jest --maxWorkers=2"
   },
   "keywords": [
     "get",
@@ -22,14 +22,9 @@
   "author": "Juan Camilo Guarin P",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^22.2.0",
-    "jest": "^22.4.2",
-    "ts-jest": "^22.4.1",
     "typescript": "^2.7.2"
   },
   "jest": {
-    "mapCoverage": true,
-    "collectCoverage": true,
     "collectCoverageFrom": [
       "src/*.ts"
     ],
@@ -45,5 +40,10 @@
       "json",
       "node"
     ]
+  },
+  "dependencies": {
+    "@types/jest": "^23.3.2",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.3"
   }
 }
