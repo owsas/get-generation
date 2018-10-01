@@ -1,5 +1,7 @@
 # get-generation
 
+![Travis](https://travis-ci.org/jcguarinpenaranda/get-generation.svg?branch=master)
+
 This module returns the generation of a person, given it's birth year
 
 For example, if a person was born in 2000, it would say that he/she is from the Generation Z
